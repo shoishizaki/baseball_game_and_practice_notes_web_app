@@ -1,0 +1,38 @@
+/*
+ * font family
+ *
+ *  Playfair Display
+ *  Source Sans Pro
+ *
+*/
+
+/*
+ * color
+ *
+ *  #091034
+ *  #0A2299
+ *  #183BF0
+ *  #798EF6
+ *  #DDE3FD
+ *
+*/
+
+body {
+    text-align: center;
+    font-family: 'Source Sans Pro';
+    color: #091034;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display';
+    color: #183BF0;
+}
+
+.main-section{
+    background-color: #DDE3FD;
+}
+
+.footer-section{
+    /* position: relative; */
+}
