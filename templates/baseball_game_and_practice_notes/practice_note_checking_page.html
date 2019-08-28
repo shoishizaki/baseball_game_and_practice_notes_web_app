@@ -1,0 +1,21 @@
+  {% extends "base.html" %}
+  {% block content %}
+
+      <section class="main-section">
+        <div class="col-9">
+        <h1>練習の記録</h1>
+        {% for practice_note in practice_note_list %}
+          <div class="card w-75">
+            <div class="card-body">
+              <h5 class="card-title">{{ practice_note.date }}</h5>
+              <a href="#" class="btn btn-primary">表示</a>
+              <a href="#" class="btn btn-primary">編集</a>
+              <a href="#" class="btn btn-primary">消去</a>
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+      </section>
+
+
+  {% endblock %}
