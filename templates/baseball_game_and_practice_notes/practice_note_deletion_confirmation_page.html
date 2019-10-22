@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+  {% block content %}
 
-</body>
-</html>
+      <section class="main-section">
+          <p>日付</p>
+          <p>{{ practice_note_data.date }}</p>
+          <p>天気</p>
+          <p>{{ practice_note_data.weather }}</p>
+          <p>メニュー</p>
+          <p>{{ practice_note_data.practice_menu }}</p>
+          <p>バッティング（良かった点・悪かった点）</p>
+          <p>{{ practice_note_data.batting }}</p>
+          <p>守備（良かった点・悪かった点）</p>
+          <p>{{ practice_note_data.defense }}</p>
+          <p>走塁（良かった点・悪かった点）</p>
+          <p>{{ practice_note_data.running }}</p>
+          <p>他者からのアドバイス（良かった点・悪かった点）</p>
+          <p>{{ practice_note_data.advice }}</p>
+          <p>次回から気をつけること</p>
+          <p>{{ practice_note_data.next_goal }}</p>
+      </section>
+
+      <form method="post" action="/delete_practice_note/{{ practice_note_data.id }}/">{% csrf_token %}
+        <button class="btn" type="submit" onclick='return confirm("本当に削除しますか？");'>削除</button>
+      </form>
+
+  {% endblock %}
