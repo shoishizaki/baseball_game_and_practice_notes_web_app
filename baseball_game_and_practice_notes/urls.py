@@ -9,4 +9,5 @@ urlpatterns = [
     path('add_practice_note/', views.add_practice_note, name='add_practice_note_page'),
     path('delete_practice_note/<int:pk>/', views.delete_practice_note, name='delete_function_of_practice_note'),
     path('confirm_deletion_practice_note/<int:pk>', views.confirm_deletion_practice_note, name='confirm_deletion_practice_note_page'),
+    path('edit_practice_note/<int:pk>/', views.edit_practice_note, name='edit_practice_note_page'),
 ]
