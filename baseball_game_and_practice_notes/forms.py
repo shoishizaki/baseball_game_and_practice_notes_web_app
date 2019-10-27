@@ -25,7 +25,7 @@ class PracticeNoteForm(forms.Form):
     )
 
     practice_menu = forms.CharField(
-        label='practice menu',
+        label='practice_menu',
         max_length=10000,
         required=True,
         widget=forms.TextInput()
@@ -60,7 +60,7 @@ class PracticeNoteForm(forms.Form):
     )
 
     next_goal = forms.CharField(
-        label='next goal',
+        label='next_goal',
         max_length=10000,
         required=True,
         widget=forms.TextInput()
