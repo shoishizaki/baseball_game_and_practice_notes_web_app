@@ -2,22 +2,24 @@
   {% block content %}
 
       <section class="main-section">
-          <p>日付</p>
+        <div class="note">
+          <h5>日付</h5>
           <p>{{ practice_note_data.date }}</p>
-          <p>天気</p>
+          <h5>天気</h5>
           <p>{{ practice_note_data.weather }}</p>
-          <p>メニュー</p>
+          <h5>メニュー</h5>
           <p>{{ practice_note_data.practice_menu }}</p>
-          <p>バッティング（良かった点・悪かった点）</p>
+          <h5>バッティング（良かった点・悪かった点）</h5>
           <p>{{ practice_note_data.batting }}</p>
-          <p>守備（良かった点・悪かった点）</p>
+          <h5>守備（良かった点・悪かった点）</h5>
           <p>{{ practice_note_data.defense }}</p>
-          <p>走塁（良かった点・悪かった点）</p>
+          <h5>走塁（良かった点・悪かった点）</h5>
           <p>{{ practice_note_data.running }}</p>
-          <p>他者からのアドバイス（良かった点・悪かった点）</p>
+          <h5>他者からのアドバイス（良かった点・悪かった点）</h5>
           <p>{{ practice_note_data.advice }}</p>
-          <p>次回から気をつけること</p>
+          <h5>次回から気をつけること</h5>
           <p>{{ practice_note_data.next_goal }}</p>
+        </div>
       </section>
 
 

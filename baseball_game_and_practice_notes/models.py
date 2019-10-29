@@ -41,6 +41,13 @@ class GameNote(models.Model):
         (10,10),
 
     )
+    NUMBER_CHOICES_3 = (
+        (0,0),
+        (1,1),
+        (2,2),
+        (3,3),
+        (4,4),
+    )
     POSITION_CHOICES = (
         ('投手','投手'),
         ('捕手','捕手'),
@@ -105,12 +112,6 @@ class GameNote(models.Model):
         ('左邪直','左邪直'),
         ('中邪直','中邪直'),
         ('右邪直','右邪直'),
-        ('投犠飛','投犠飛'),
-        ('捕犠飛','捕犠飛'),
-        ('一犠飛','一犠飛'),
-        ('二犠飛','二犠飛'),
-        ('三犠飛','三犠飛'),
-        ('遊犠飛','遊犠飛'),
         ('投ゴロ失','投ゴロ失'),
         ('捕ゴロ失','捕ゴロ失'),
         ('一ゴロ失','一ゴロ失'),
@@ -268,6 +269,15 @@ class GameNote(models.Model):
         ('二犠打','二犠打'),
         ('三犠打','三犠打'),
         ('遊犠打','遊犠打'),
+        ('投犠飛', '投犠飛'),
+        ('捕犠飛', '捕犠飛'),
+        ('一犠飛', '一犠飛'),
+        ('二犠飛', '二犠飛'),
+        ('三犠飛', '三犠飛'),
+        ('遊犠飛', '遊犠飛'),
+        ('左犠飛', '左犠飛'),
+        ('中犠飛', '中犠飛'),
+        ('右犠飛', '右犠飛'),
         ('四球','四球'),
         ('死球','死球'),
         ('敬遠','敬遠'),
@@ -286,15 +296,25 @@ class GameNote(models.Model):
     position_4 = models.CharField(max_length=10, choices=POSITION_CHOICES, blank=True, null=True)
     position_5 = models.CharField(max_length=10, choices=POSITION_CHOICES, blank=True, null=True)
     fielder_result_1 = models.CharField(max_length=10, choices=FIELDER_RESULT_CHOICES, blank=True, null=True)
+    fielder_result_1_RBI = models.IntegerField(choices=NUMBER_CHOICES_3, default=0)
     fielder_result_2 = models.CharField(max_length=10, choices=FIELDER_RESULT_CHOICES, blank=True, null=True)
+    fielder_result_2_RBI = models.IntegerField(choices=NUMBER_CHOICES_3, default=0)
     fielder_result_3 = models.CharField(max_length=10, choices=FIELDER_RESULT_CHOICES, blank=True, null=True)
+    fielder_result_3_RBI = models.IntegerField(choices=NUMBER_CHOICES_3, default=0)
     fielder_result_4 = models.CharField(max_length=10, choices=FIELDER_RESULT_CHOICES, blank=True, null=True)
+    fielder_result_4_RBI = models.IntegerField(choices=NUMBER_CHOICES_3, default=0)
     fielder_result_5 = models.CharField(max_length=10, choices=FIELDER_RESULT_CHOICES, blank=True, null=True)
+    fielder_result_5_RBI = models.IntegerField(choices=NUMBER_CHOICES_3, default=0)
     fielder_result_6 = models.CharField(max_length=10, choices=FIELDER_RESULT_CHOICES, blank=True, null=True)
+    fielder_result_6_RBI = models.IntegerField(choices=NUMBER_CHOICES_3, default=0)
     fielder_result_7 = models.CharField(max_length=10, choices=FIELDER_RESULT_CHOICES, blank=True, null=True)
+    fielder_result_7_RBI = models.IntegerField(choices=NUMBER_CHOICES_3, default=0)
     fielder_result_8 = models.CharField(max_length=10, choices=FIELDER_RESULT_CHOICES, blank=True, null=True)
+    fielder_result_8_RBI = models.IntegerField(choices=NUMBER_CHOICES_3, default=0)
     fielder_result_9 = models.CharField(max_length=10, choices=FIELDER_RESULT_CHOICES, blank=True, null=True)
+    fielder_result_9_RBI = models.IntegerField(choices=NUMBER_CHOICES_3, default=0)
     fielder_result_10 = models.CharField(max_length=10, choices=FIELDER_RESULT_CHOICES, blank=True, null=True)
+    fielder_result_10_RBI = models.IntegerField(choices=NUMBER_CHOICES_3, default=0)
     stealing_second_base_count = models.IntegerField(choices=NUMBER_CHOICES_2, blank=True, null=True)
     stealing_third_base_count = models.IntegerField(choices=NUMBER_CHOICES_2, blank=True, null=True)
     good_point_in_the_game = models.TextField(max_length=1000, blank=True, null=True)
