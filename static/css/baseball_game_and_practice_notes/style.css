@@ -57,9 +57,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-section{
-    background-color: #DDE3FD;
+    background-color: white;
 }
 
 .footer-section{
     /* position: relative; */
+}
+
+/*practice_note_detail_page.html*/
+
+.note{
+    background: white;
+    width: 80%;
+    margin: 24px auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 24px;
+}
+
+/*practice_note_checking_page.html*/
+
+.card{
+    background: white;
+    width: 200px;
+    height: 300px;
+    margin: 24px auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 16px;
+    cursor: pointer;
+}
+
+.card:hover{
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6);
 }
