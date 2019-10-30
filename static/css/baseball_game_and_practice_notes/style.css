@@ -124,3 +124,64 @@ h1, h2, h3, h4, h5, h6 {
 .card:hover{
     box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6);
 }
+
+/*practice_note_add_page.html*/
+
+.container{
+    width: 80%;
+    margin: 24px auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 24px;
+    background: linear-gradient(#ccc 1px, transparent 1px) #fffbf2;
+    background-size: auto 2.5em;
+    line-height: 2.5em;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    overflow: hidden;
+}
+.container h5{
+    text-align: left;
+}
+
+.container p{
+    text-align: left;
+}
+
+.container input[type="date"]{
+    white-space: pre;
+    appearance: none;
+    background: linear-gradient(#ccc 1px, transparent 1px) #fffbf2;
+    background-size: auto 2.5em;
+    line-height: 2.5em;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.container select{
+    white-space: pre;
+    appearance: none;
+    background: linear-gradient(#ccc 1px, transparent 1px) #fffbf2;
+    background-size: auto 2.5em;
+    line-height: 2.5em;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.container textarea{
+    white-space: pre;
+    width: 100%;
+    height: 200px;
+    appearance: none;
+    background: linear-gradient(#ccc 1px, transparent 1px) #fffbf2;
+    background-size: auto 2.5em;
+    line-height: 2.5em;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    overflow: hidden;
+}
