@@ -29,12 +29,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* header */
+
 .header-section{
     height: 70px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
+    background-color: #ccff33;
 }
 
 .logo-container{
@@ -61,17 +63,50 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-section{
+    background-color: #ccff33;
     /* position: relative; */
 }
 
 /*practice_note_detail_page.html*/
+.title{
+    text-align: left;
+    width: 80%;
+    margin: 24px auto;
+}
+
+/*.note{*/
+/*    background-image: url("/static/images/001-Basik-Paper.png");*/
+/*    width: 80%;*/
+/*    margin: 24px auto;*/
+/*    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);*/
+/*    padding: 24px;*/
+/*}*/
 
 .note{
-    background: white;
     width: 80%;
     margin: 24px auto;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     padding: 24px;
+    background: linear-gradient(#ccc 1px, transparent 1px) #fffbf2;
+    background-size: auto 2.5em;
+    line-height: 2.5em;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.note h5{
+    text-align: left;
+}
+
+.note p{
+    text-align: left;
+}
+
+.link{
+    /*background-color: #B4FFB2;*/
+    background-color: #ccff33;
 }
 
 /*practice_note_checking_page.html*/

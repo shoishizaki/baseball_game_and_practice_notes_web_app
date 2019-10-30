@@ -1,6 +1,10 @@
 {% extends "base.html" %}
   {% block content %}
 
+      <div class="title">
+          <h2>練習ノート</h2>
+      </div>
+
       <section class="main-section">
         <div class="note">
           <h5>日付</h5>
@@ -22,7 +26,7 @@
         </div>
       </section>
 
-      <div>
+      <div class="link">
         <a href="/edit_practice_note/{{ practice_note_data.id }}">編集</a>
         <a href="/confirm_deletion_practice_note/{{ practice_note_data.id }}">消去</a>
       </div>
