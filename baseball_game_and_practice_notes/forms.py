@@ -28,40 +28,40 @@ class PracticeNoteForm(forms.Form):
         label='practice_menu',
         max_length=10000,
         required=True,
-        widget=forms.TextInput()
+        widget=forms.Textarea(),
     )
 
     batting = forms.CharField(
         label='batting',
         max_length=10000,
         required=False,
-        widget=forms.TextInput()
+        widget=forms.Textarea(),
     )
 
     defense = forms.CharField(
         label='defense',
         max_length=10000,
         required=False,
-        widget=forms.TextInput()
+        widget=forms.Textarea(),
     )
 
     running = forms.CharField(
         label='running',
         max_length=10000,
         required=False,
-        widget=forms.TextInput()
+        widget=forms.Textarea(),
     )
 
     advice = forms.CharField(
         label='advice',
         max_length=10000,
         required=False,
-        widget=forms.TextInput()
+        widget=forms.Textarea(),
     )
 
     next_goal = forms.CharField(
         label='next_goal',
         max_length=10000,
         required=True,
-        widget=forms.TextInput()
+        widget=forms.Textarea(),
     )
