@@ -2,14 +2,17 @@
   {% block content %}
 
       <section class="main-section">
-        <div>
-        <h1>練習の記録</h1>
+        <div class="title">
+          <h1>練習の記録</h1>
+        </div>
+        <div class="note">
         {% for practice_note in practice_note_list %}
-          <div class="card">
-            <h5 class="card-title">{{ practice_note.date }}</h5>
-              <a href="/detail_practice_note/{{ practice_note.id }}" class="btn btn-primary">表示</a>
-          </div>
+          <div class="husen">
+            <ul>
+              <li><a href="/detail_practice_note/{{ practice_note.id }}">{{ practice_note.date }}</a></li>
+            </ul>
         {% endfor %}
+          </div>
         </div>
       </section>
 
