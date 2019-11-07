@@ -1,32 +1,31 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
-    <div class="title">
-      <h1>練習ノート作成</h1>
-    </div>
+<div class="title">
+  <h1>練習ノート作成</h1>
+</div>
 
-    <div class="container">
-        <form action="" method="post">
-                {% csrf_token %}
-                    <h5>日付</h5>
-                    <p>{{ form.date }}</p>
-                    <h5>天気</h5>
-                    <p>{{ form.weather }}</p>
-                    <h5>練習メニュー</h5>
-                    <p>{{ form.practice_menu }}</p>
-                    <h5>練習で意識したこと・反省点（バッティング）</h5>
-                    <p>{{ form.batting }}</p>
-                    <h5>練習で意識したこと・反省点（守備）</h5>
-                    <p>{{ form.defense }}</p>
-                    <h5>練習で意識したこと・反省点（走塁）</h5>
-                    <p>{{ form.running }}</p>
-                    <h5>他者からのアドバイス</h5>
-                    <p>{{ form.advice }}</p>
-                    <h5>次回から意識すること</h5>
-                    <p>{{ form.next_goal }}</p>
-                    <input class="btn btn-primary" type="submit" value="書き込み終了">
-                    <input class="btn btn-secondary" type="reset" value="始めから書き直す">
-        </form>
-    </div>
+<div class="container">
+  <form action="" method="post">
+    {% csrf_token %}
+    <h5>日付</h5>
+    <p>{{ form.date }}</p>
+    <h5>天気</h5>
+    <p>{{ form.weather }}</p>
+    <h5>練習メニュー</h5>
+    <p>{{ form.practice_menu }}</p>
+    <h5>練習で意識したこと・反省点（バッティング）</h5>
+    <p>{{ form.batting }}</p>
+    <h5>練習で意識したこと・反省点（守備）</h5>
+    <p>{{ form.defense }}</p>
+    <h5>練習で意識したこと・反省点（走塁）</h5>
+    <p>{{ form.running }}</p>
+    <h5>他者からのアドバイス</h5>
+    <p>{{ form.advice }}</p>
+    <h5>次回から意識すること</h5>
+    <p>{{ form.next_goal }}</p>
+    <input class="btn" type="submit" value="書き込み終了" />
+    <input class="btn" type="reset" value="始めから書き直す" />
+  </form>
+</div>
 
 {% endblock %}
