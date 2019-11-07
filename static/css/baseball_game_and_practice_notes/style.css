@@ -18,189 +18,249 @@
 */
 
 body {
-    text-align: center;
-    font-family: 'Source Sans Pro';
-    color: #091034;
+  text-align: center;
+  font-family: "Source Sans Pro";
+  color: #091034;
+  margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display';
-    color: #183BF0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display";
+  color: #183bf0;
 }
 
-li a {
-    display:block;
+a {
+  text-decoration: none;
 }
 
 /* header */
 
-.header-section{
-    height: 70px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 25px;
-    background-color: #ccff33;
+.header-section {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  background-color: #ccff33;
 }
 
-.logo-container{
-    height: 100%;
-    width: 210px;
-    padding: 25px;
+.logo-container {
+  height: 100%;
+  width: 210px;
+  padding: 25px;
 }
 
-.options{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+.options {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.option{
-    padding: 10px 15px;
-    cursor: pointer;
+.option {
+  padding: 10px 15px;
+  cursor: pointer;
 }
 
-.main-section{
-    background-color: white;
+.main-section {
+  background-color: white;
 }
 
-.footer-section{
-    background-color: #ccff33;
-    /* position: relative; */
+.footer-section {
+  font-family: "Playfair Display";
+  color: #183bf0;
+  background-color: #ccff33;
+  /* position: relative; */
 }
 
 /*practice_note_detail_page.html*/
-.title{
-    text-align: left;
-    width: 80%;
-    margin: 24px auto;
+.title {
+  text-align: left;
+  width: 80%;
+  margin: 24px auto;
 }
 
-/*.note{*/
-/*    background-image: url("/static/images/001-Basik-Paper.png");*/
-/*    width: 80%;*/
-/*    margin: 24px auto;*/
-/*    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);*/
-/*    padding: 24px;*/
-/*}*/
-
-.note{
-    width: 80%;
-    margin: 24px auto;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    padding: 24px;
-    background: linear-gradient(#ccc 1px, transparent 1px) #fffbf2;
-    background-size: auto 2.5em;
-    line-height: 2.5em;
-    border-bottom: 1px solid #ccc;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-    overflow: hidden;
+.note {
+  width: 80%;
+  margin: 24px auto;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  background: linear-gradient(#ccc 1px, transparent 1px) #fffbf2;
+  background-size: auto 2.5em;
+  line-height: 2.5em;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  overflow: hidden;
+  display: block;
 }
 
-.note h5{
-    text-align: left;
+.note h5 {
+  text-align: left;
 }
 
-.note p{
-    text-align: left;
+.note p {
+  text-align: left;
 }
 
-.link{
-    /*background-color: #B4FFB2;*/
-    background-color: #ccff33;
+.link {
+  background-color: #ccff33;
+}
+
+.link a {
+  font-family: "Playfair Display";
+  color: #183bf0;
+}
+
+.link a:hover {
+  cursor: pointer;
+}
+
+.link a:visited {
+  font-family: "Playfair Display";
+  color: #183bf0;
 }
 
 /*practice_note_checking_page.html*/
 
-.husen{
-    width: 300px;
-    position: relative;
-    z-index: 0;
+.fusen-note {
+  width: 80%;
+  margin: 24px auto;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  background: linear-gradient(#ccc 1px, transparent 1px) #fffbf2;
+  background-size: auto 2.5em;
+  line-height: 2.5em;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: space-around;
 }
 
-.husen ul li{
-    list-style: none;
-    font-size: 0.9em;
-    margin: 1.6em 0;
-    padding: 1em;
-    position: relative;
-    background: linear-gradient(to right, #ffffcc 0%, #f1f1c1 0.5%, #f1f1c1 13%, #ffffcc 16%);
+.husen {
+  width: 300px;
+  position: relative;
+  z-index: 0;
+  margin: 1.6em 1em;
 }
 
-.husen ul li::after{
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: -1;
-    bottom: 5px;
-    right: 0;
-    height: 15px;
-    width: 99%;
-    background: rgba(0,0,0,0.5);
-    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
-    transform: rotate(2deg);
+.husen .husen-b {
+  font-size: 0.9em;
+  position: relative;
+  display: block;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    #ffffcc 0%,
+    #f1f1c1 0.5%,
+    #f1f1c1 13%,
+    #ffffcc 16%
+  );
+}
+
+.husen .husen-b::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  bottom: 5px;
+  right: 0;
+  height: 15px;
+  width: 99%;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  transform: rotate(2deg);
+}
+
+.husen:hover {
+  cursor: pointer;
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15), 0 0 5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.husen .husen-b a:visited {
+  font-family: "Playfair Display";
+  color: #183bf0;
 }
 
 /*practice_note_add_page.html*/
 
-.container{
-    width: 80%;
-    margin: 24px auto;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    padding: 24px;
-    background: linear-gradient(#ccc 1px, transparent 1px) #fffbf2;
-    background-size: auto 2.5em;
-    line-height: 2.5em;
-    border-bottom: 1px solid #ccc;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-    overflow: hidden;
+.container {
+  width: 80%;
+  margin: 24px auto;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  background: linear-gradient(#ccc 1px, transparent 1px) #fffbf2;
+  background-size: auto 2.5em;
+  line-height: 2.5em;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  overflow: hidden;
 }
-.container h5{
-    text-align: left;
-}
-
-.container p{
-    text-align: left;
+.container h5 {
+  text-align: left;
 }
 
-.container input[type="date"]{
-    white-space: pre;
-    appearance: none;
-    background: linear-gradient(#ccc 1px, transparent 1px) #fffbf2;
-    background-size: auto 2.5em;
-    line-height: 2.5em;
-    border-bottom: 1px solid #ccc;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-    overflow: hidden;
+.container p {
+  text-align: left;
 }
 
-.container select{
-    white-space: pre;
-    appearance: none;
-    background: linear-gradient(#ccc 1px, transparent 1px) #fffbf2;
-    background-size: auto 2.5em;
-    line-height: 2.5em;
-    border-bottom: 1px solid #ccc;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-    overflow: hidden;
+.container input[type="date"] {
+  white-space: pre;
+  appearance: none;
+  background-color: rgba(0, 0, 0, 0.05);
+  line-height: 2.5em;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  overflow: hidden;
 }
 
-.container textarea{
-    white-space: pre;
-    width: 100%;
-    height: 200px;
-    appearance: none;
-    background: linear-gradient(#ccc 1px, transparent 1px) #fffbf2;
-    background-size: auto 2.5em;
-    line-height: 2.5em;
-    border-bottom: 1px solid #ccc;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-    overflow: hidden;
+.container select {
+  white-space: pre;
+  appearance: none;
+  background-color: rgba(0, 0, 0, 0.05);
+  line-height: 2.5em;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  overflow: hidden;
+}
+
+.container textarea {
+  white-space: pre;
+  width: 100%;
+  height: 200px;
+  appearance: none;
+  background-color: rgba(0, 0, 0, 0.05);
+  line-height: 2.5em;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  overflow: hidden;
+}
+
+.btn {
+  font-family: "Playfair Display";
+  color: #183bf0;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15), 0 0 5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
 }
