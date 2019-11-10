@@ -1,5 +1,4 @@
 {% extends "base.html" %} {% block content %}
-
 <title>detail page</title>
 
 <div class="title">
@@ -8,22 +7,36 @@
 
 <section class="main-section">
   <div class="note">
-    <h5>日付</h5>
-    <p>{{ practice_note_data.date }}</p>
-    <h5>天気</h5>
-    <p>{{ practice_note_data.weather }}</p>
-    <h5>メニュー</h5>
-    <p>{{ practice_note_data.practice_menu }}</p>
-    <h5>バッティング（良かった点・悪かった点）</h5>
-    <p>{{ practice_note_data.batting }}</p>
-    <h5>守備（良かった点・悪かった点）</h5>
-    <p>{{ practice_note_data.defense }}</p>
-    <h5>走塁（良かった点・悪かった点）</h5>
-    <p>{{ practice_note_data.running }}</p>
-    <h5>他者からのアドバイス（良かった点・悪かった点）</h5>
-    <p>{{ practice_note_data.advice }}</p>
-    <h5>次回から気をつけること</h5>
-    <p>{{ practice_note_data.next_goal }}</p>
+    <div class="title-section">
+      <h5>日付</h5>
+      <p>{{ practice_note_data.date }}</p>
+      <h5>天気</h5>
+      <p>{{ practice_note_data.weather }}</p>
+    </div>
+
+    <div class="content-section">
+      <h5>メニュー</h5>
+      <p>{{ practice_note_data.practice_menu }}</p>
+      {% if practice_note_data.batting %}
+      <h5>バッティング（良かった点・悪かった点）</h5>
+      <p>{{ practice_note_data.batting }}</p>
+      {% endif %} {% if practice_note_data.defense %}
+      <h5>守備（良かった点・悪かった点）</h5>
+      <p>{{ practice_note_data.defense }}</p>
+      {% endif %} {% if practice_note_data.running %}
+      <h5>走塁（良かった点・悪かった点）</h5>
+      <p>{{ practice_note_data.running }}</p>
+      {% endif %}
+    </div>
+
+    <div class="reflection-section">
+      {% if practice_note_data.advice %}
+      <h5>他者からのアドバイス（良かった点・悪かった点）</h5>
+      <p>{{ practice_note_data.advice }}</p>
+      {% endif %}
+      <h5>次回から気をつけること</h5>
+      <p>{{ practice_note_data.next_goal }}</p>
+    </div>
   </div>
 </section>
 
@@ -31,5 +44,4 @@
   <a href="/edit_practice_note/{{ practice_note_data.id }}">編集</a>
   <a href="/confirm_deletion_practice_note/{{ practice_note_data.id }}">消去</a>
 </div>
-
 {% endblock %}
