@@ -6,9 +6,6 @@ from django.views.decorators.http import require_POST
 from .models import PracticeNote
 from .forms import PracticeNoteForm
 
-# Create your views here.
-
-
 def index(request):
     return render(request,'baseball_game_and_practice_notes/first_page.html')
 
@@ -30,25 +27,15 @@ def add_practice_note(request):
     practice_note_list = PracticeNote.objects.all()
     add_practice_note_dict = {'practice_note_list':practice_note_list, 'form':form}
     if form.is_valid():
-        practice_note = PracticeNote()
-        practice_note.date = form.cleaned_data['date']
-        practice_note.weather = form.cleaned_data['weather']
-        practice_note.practice_menu = form.cleaned_data['practice_menu']
-        practice_note.batting = form.cleaned_data['batting']
-        practice_note.defense = form.cleaned_data['defense']
-        practice_note.running = form.cleaned_data['running']
-        practice_note.advice = form.cleaned_data['advice']
-        practice_note.next_goal = form.cleaned_data['next_goal']
-
         PracticeNote.objects.create(
-            date=practice_note.date,
-            weather=practice_note.weather,
-            practice_menu=practice_note.practice_menu,
-            batting=practice_note.batting,
-            defense=practice_note.defense,
-            running=practice_note.running,
-            advice=practice_note.advice,
-            next_goal=practice_note.next_goal,
+            date = form.cleaned_data['date'],
+            weather = form.cleaned_data['weather'],
+            practice_menu = form.cleaned_data['practice_menu'].strip(),
+            batting = form.cleaned_data['batting'].strip(),
+            defense = form.cleaned_data['defense'].strip(),
+            running = form.cleaned_data['running'].strip(),
+            advice = form.cleaned_data['advice'].strip(),
+            next_goal = form.cleaned_data['next_goal'].strip(),
         )
         return redirect('index')
     return render(request, 'baseball_game_and_practice_notes/practice_note_add_page.html', add_practice_note_dict)
@@ -70,16 +57,24 @@ def confirm_deletion_practice_note(request, pk):
 def edit_practice_note(request, pk):
     practice_note_data = get_object_or_404(PracticeNote, pk=pk)
     if request.method == "POST":
-        practice_note_data.date = request.POST['date']
-        practice_note_data.weather = request.POST['weather']
-        practice_note_data.practice_menu = request.POST['practice_menu']
-        practice_note_data.batting = request.POST['batting']
-        practice_note_data.defense = request.POST['defense']
-        practice_note_data.running = request.POST['running']
-        practice_note_data.advice = request.POST['advice']
-        practice_note_data.next_goal = request.POST['next_goal']
+        practice_note_data.date = request.POST['date'].strip()
+        practice_note_data.weather = request.POST['weather'].strip()
+        practice_note_data.practice_menu = request.POST['practice_menu'].strip()
+        practice_note_data.batting = request.POST['batting'].strip()
+        practice_note_data.defense = request.POST['defense'].strip()
+        practice_note_data.running = request.POST['running'].strip()
+        practice_note_data.advice = request.POST['advice'].strip()
+        practice_note_data.next_goal = request.POST['next_goal'].strip()
         practice_note_data.save()
         return redirect('index')
     else:
-        edit_practice_note_dict = {'practice_note_data':practice_note_data}
+        edit_practice_note_dict = {
+            'practice_note_data': practice_note_data,
+            'practice_note_data_practice_menu': practice_note_data.practice_menu.strip(),
+            'practice_note_data_batting': practice_note_data.batting.strip(),
+            'practice_note_data_defense': practice_note_data.defense.strip(),
+            'practice_note_data_running': practice_note_data.running.strip(),
+            'practice_note_data_advice': practice_note_data.advice.strip(),
+            'practice_note_data_next_goal': practice_note_data.next_goal.strip(),
+        }
         return render(request, 'baseball_game_and_practice_notes/practice_note_edit_page.html', edit_practice_note_dict)

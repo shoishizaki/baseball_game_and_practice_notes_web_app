@@ -5,10 +5,10 @@ from django.db import models
 
 class PracticeNote(models.Model):
     WEATHER_CHOICES = (
-        ('晴','晴'),
-        ('曇','曇'),
-        ('雨','雨'),
-        ('雪','雪'),
+        ('晴','☀️ 晴'),
+        ('曇','☁️ 曇'),
+        ('雨','☔️ 雨'),
+        ('雪','❄️ 雪'),
     )
     date = models.DateField()
     weather = models.CharField(max_length=10, choices=WEATHER_CHOICES)

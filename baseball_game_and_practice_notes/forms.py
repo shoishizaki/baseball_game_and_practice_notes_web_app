@@ -1,13 +1,11 @@
 from django import forms
 
-
 WEATHER_CHOICES = (
         ('晴','晴'),
         ('曇','曇'),
         ('雨','雨'),
         ('雪','雪'),
 )
-
 
 class PracticeNoteForm(forms.Form):
     date = forms.DateTimeField(
