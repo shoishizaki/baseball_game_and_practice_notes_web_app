@@ -1,17 +1,22 @@
-  {% extends "base.html" %}
-  {% block content %}
+{% extends "base.html" %} {% block content %}
 
-      <section class="main-section">
-        <div>
-        <h1>練習の記録</h1>
-        {% for practice_note in practice_note_list %}
-          <div class="card">
-            <h5 class="card-title">{{ practice_note.date }}</h5>
-              <a href="/detail_practice_note/{{ practice_note.id }}" class="btn btn-primary">表示</a>
-          </div>
-        {% endfor %}
-        </div>
-      </section>
+<title>check page</title>
 
+<section class="main-section">
+  <div class="title">
+    <h1>練習の記録</h1>
+  </div>
+  <div class="fusen-note">
+    {% for practice_note in practice_note_list %}
+    <div class="husen">
+      <div class="husen-b">
+        <a href="/detail_practice_note/{{ practice_note.id }}"
+          >{{ practice_note.date }}
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
 
-  {% endblock %}
+{% endblock %}
