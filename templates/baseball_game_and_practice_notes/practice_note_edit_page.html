@@ -9,66 +9,53 @@
 <div class="container">
   <form action="" method="post">
     {% csrf_token %}
-    <p><label for="date">日付</label></p>
-    <p>
-      <input
-        type="date"
-        name="date"
-        id="date"
-        value="{{ practice_note_data.date }}"
-      />
-    </p>
-    <p><label for="weather">天気</label></p>
-    <p>
-      <select name="weather" id="weather">
-        <option value="{{ practice_note_data.weather }}">
-          {{　practice_note_data.weather　}}
-        </option>
-        <option value="晴">晴</option>
-        <option value="曇">曇</option>
-        <option value="雨">雨</option>
-        <option value="雪">雪</option>
-      </select>
-    </p>
-    <p><label for="practice_menu">練習メニュー</label></p>
-    <p>
-      <textarea class="form-control" name="practice_menu" id="practice_menu">
-        {{　practice_note_data.practice_menu　}}
-      </textarea>
-    </p>
-    <p>
-      <label for="batting">練習で意識したこと・反省点（バッティング）</label>
-    </p>
-    <p>
-      <textarea class="form-control" name="batting" id="batting">
-        {{　practice_note_data.batting　}}
-      </textarea>
-    </p>
-    <p><label for="defense">練習で意識したこと・反省点（守備）</label></p>
-    <p>
-      <textarea class="form-control" name="defense" id="defense">
-        {{　practice_note_data.defense　}}
-      </textarea>
-    </p>
-    <p><label for="running">練習で意識したこと・反省点（走塁）</label></p>
-    <p>
-      <textarea class="form-control" name="running" id="running">
-        {{　practice_note_data.running　}}
-      </textarea>
-    </p>
-    <p><label for="advice">他者からのアドバイス</label></p>
-    <p>
-      <textarea class="form-control" name="advice" id="advice">
-        {{　practice_note_data.advice　}}
-      </textarea>
-    </p>
-    <p><label for="next_goal">次回から意識すること</label></p>
-    <p>
-      <textarea class="form-control" name="next_goal" id="next_goal">
-        {{　practice_note_data.next_goal　}}
-      </textarea>
-    </p>
-    <p><button type="submit">更新</button></p>
+    <label for="date">日付</label>
+    <input
+      type="date"
+      name="date"
+      id="date"
+      value="{{ practice_note_data_date }}"
+    />
+    <label for="weather">天気</label>
+    <select name="weather" id="weather">
+      <option value="{{ practice_note_data.weather }}">
+        {{　practice_note_data.weather　}}
+      </option>
+      <option value="晴">晴</option>
+      <option value="曇">曇</option>
+      <option value="雨">雨</option>
+      <option value="雪">雪</option>
+    </select>
+    <label for="practice_menu">練習メニュー</label>
+    <textarea
+      class="form-control"
+      name="practice_menu"
+      id="practice_menu"
+      placeholder="練習メニュー"
+    >
+      {{　practice_note_data.practice_menu　}}
+    </textarea>
+    <label for="batting">練習で意識したこと・反省点（バッティング）</label>
+    <textarea class="form-control" name="batting" id="batting">
+      {{　practice_note_data.batting　}}
+    </textarea>
+    <label for="defense">練習で意識したこと・反省点（守備）</label>
+    <textarea class="form-control" name="defense" id="defense">
+      {{　practice_note_data.defense　}}
+    </textarea>
+    <label for="running">練習で意識したこと・反省点（走塁）</label>
+    <textarea class="form-control" name="running" id="running">
+      {{　practice_note_data.running　}}
+    </textarea>
+    <label for="advice">他者からのアドバイス</label>
+    <textarea class="form-control" name="advice" id="advice">
+      {{　practice_note_data.advice　}}
+    </textarea>
+    <label for="next_goal">次回から意識すること</label>
+    <textarea class="form-control" name="next_goal" id="next_goal">
+      {{　practice_note_data.next_goal　}}
+    </textarea>
+    <button type="submit">更新</button>
   </form>
 </div>
 
