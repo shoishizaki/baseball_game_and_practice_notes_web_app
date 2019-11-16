@@ -56,6 +56,8 @@ def confirm_deletion_practice_note(request, pk):
 
 def edit_practice_note(request, pk):
     practice_note_data = get_object_or_404(PracticeNote, pk=pk)
+    print(practice_note_data.date)
+    print("{0:%Y-%m-%d}".format(practice_note_data.date))
     if request.method == "POST":
         practice_note_data.date = request.POST['date'].strip()
         practice_note_data.weather = request.POST['weather'].strip()
@@ -70,6 +72,7 @@ def edit_practice_note(request, pk):
     else:
         edit_practice_note_dict = {
             'practice_note_data': practice_note_data,
+            'practice_note_data_date': "{0:%Y-%m-%d}".format(practice_note_data.date),
             'practice_note_data_practice_menu': practice_note_data.practice_menu.strip(),
             'practice_note_data_batting': practice_note_data.batting.strip(),
             'practice_note_data_defense': practice_note_data.defense.strip(),
