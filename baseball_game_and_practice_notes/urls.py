@@ -11,4 +11,5 @@ urlpatterns = [
     path('confirm_deletion_practice_note/<int:pk>', views.confirm_deletion_practice_note, name='confirm_deletion_practice_note_page'),
     path('edit_practice_note/<int:pk>/', views.edit_practice_note, name='edit_practice_note_page'),
     path('sign_up/', views.sign_up_func, name='sign_up_page'),
+    path('login/', views.loginfunc, name='login_page'),
 ]
