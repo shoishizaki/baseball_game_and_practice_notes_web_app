@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 from django.shortcuts import get_object_or_404
 from django.views.decorators.http import require_POST
+from django.contrib.auth.models import User
 
 from .models import PracticeNote
 from .forms import PracticeNoteForm
@@ -81,3 +82,12 @@ def edit_practice_note(request, pk):
             'practice_note_data_next_goal': practice_note_data.next_goal.strip(),
         }
         return render(request, 'baseball_game_and_practice_notes/practice_note_edit_page.html', edit_practice_note_dict)
+
+
+def sign_up_func(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = User.objects.create_user(username, '', password)
+        return render(request, 'sign_up.html')
+    return render(request, 'sign_up.html')
