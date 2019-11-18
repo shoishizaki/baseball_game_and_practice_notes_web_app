@@ -94,7 +94,7 @@ def sign_up_func(request):
             return render(request, 'sign_up.html', {'error':'このユーザーは登録されています'})
         except:
             user = User.objects.create_user(new_username, '', new_password)
-            return render(request, 'sign_up.html')
+            return redirect('index')
     return render(request, 'sign_up.html')
 
 
