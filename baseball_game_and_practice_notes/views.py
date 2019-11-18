@@ -3,6 +3,7 @@ from django.shortcuts import redirect
 from django.shortcuts import get_object_or_404
 from django.views.decorators.http import require_POST
 from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
 
 from .models import PracticeNote
 from .forms import PracticeNoteForm
@@ -86,8 +87,26 @@ def edit_practice_note(request, pk):
 
 def sign_up_func(request):
     if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
-        user = User.objects.create_user(username, '', password)
-        return render(request, 'sign_up.html')
+        new_username = request.POST['username']
+        new_password = request.POST['password']
+        try:
+            User.objects.get(username=new_username)
+            return render(request, 'sign_up.html', {'error':'このユーザーは登録されています'})
+        except:
+            user = User.objects.create_user(new_username, '', new_password)
+            return render(request, 'sign_up.html')
     return render(request, 'sign_up.html')
+
+
+def loginfunc(request):
+    if request.method == 'POST':
+        authentication_username = request.POST['username']
+        authentication_password = request.POST['password']
+        print(authentication_username)
+        print(authentication_password)
+        user = authenticate(request, username=authentication_username, password=authentication_password)
+        if user is not None:
+            return redirect('index')
+        else:
+            return render(request, 'login.html', {'error':'usernameもしくはpasswordが間違っています'})
+    return render(request, 'login.html')
