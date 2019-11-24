@@ -1,13 +1,24 @@
-<h2>Login</h2>
-{% if error %} {{ error }} {% endif %}
+{% load static %}
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/baseball_game_and_practice_notes/style.css' %}"
+/>
 
 <div class="login">
+  <h2>Login</h2>
+  {% if error %} {{ error }} {% endif %}
   <form action="" method="POST">
     {% csrf_token %}
-    <label for="username">UserName</label>
-    <input type="text" name="username" id="username" />
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" />
-    <button type="submit">Login</button>
+    <input type="text" name="username" id="username" placeholder="username" />
+    <input
+      type="password"
+      name="password"
+      id="password"
+      placeholder="password"
+    />
+    <input type="submit" name="" value="Login" />
   </form>
+  <a href={% url "sign_up" %}>ユーザー登録はこちら</a>
 </div>
