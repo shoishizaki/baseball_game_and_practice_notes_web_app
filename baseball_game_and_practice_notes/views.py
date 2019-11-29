@@ -14,7 +14,9 @@ from .forms import PracticeNoteForm
 
 @login_required
 def index(request):
-    return render(request,'baseball_game_and_practice_notes/first_page.html')
+    practice_note_list = PracticeNote.objects.all()
+    index_dict = {'practice_note_list':practice_note_list}
+    return render(request,'baseball_game_and_practice_notes/first_page.html', index_dict)
 
 
 @login_required
