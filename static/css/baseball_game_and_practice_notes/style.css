@@ -526,3 +526,72 @@ a:visited {
 .sign_up input[type="submit"]:hover {
   background: #2ecc71;
 }
+
+/* firstpage */
+
+.toppage {
+  text-align: left;
+  width: 80%;
+  margin: 24px auto;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  background: linear-gradient(#ccc 1px, transparent 1px) #fffbf2;
+  background-size: auto 2.5em;
+  line-height: 2.5em;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: space-around;
+}
+
+.toppage h1 {
+  background: linear-gradient(transparent 70%, #ffff00 0%);
+}
+
+.fusen-blue {
+  width: 27rem;
+  height: 14rem;
+  padding: 1.5em;
+  margin-top: 10px;
+  overflow: hidden;
+  box-shadow: 0 0.25rem 0.25rem hsla(0, 0%, 0%, 0.1);
+  background-image: linear-gradient(
+      180deg,
+      hsla(0, 0%, 45%, 0.1) 2rem,
+      hsla(0, 100%, 100%, 0) 2.5rem
+    ),
+    linear-gradient(180deg, hsla(200, 100%, 85%, 1), hsla(200, 100%, 85%, 1));
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.fusen-yellow {
+  width: 27rem;
+  height: 10rem;
+  padding: 1.5em;
+  margin-top: 10px;
+  overflow: hidden;
+  box-shadow: 0 0.25rem 0.25rem hsla(0, 0%, 0%, 0.1);
+  background-image:
+    linear-gradient(90deg, hsla(0, 0%, 45%, .1) 2rem, hsla(0, 100%, 100%, 0) 2.5rem)
+  , linear-gradient(90deg, hsla(60, 100%, 85%, 1), hsla(60, 100%, 85%, 1));
+    linear-gradient(180deg, hsla(200, 100%, 85%, 1), hsla(200, 100%, 85%, 1));
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.next_goal_area h3 {
+  background: linear-gradient(transparent 70%, #c8ff00 0%);
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.advice-area h3 {
+  background: linear-gradient(transparent 70%, #c8ff00 0%);
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
